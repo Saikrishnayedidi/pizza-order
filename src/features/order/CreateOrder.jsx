@@ -35,7 +35,6 @@ function CreateOrder() {
   const isSubmitting = navigation.state === "submitting";
 
   const formErrors = useActionData();
-  console.log(formErrors);
   function handleGetPosition(e) {
     e.preventDefault();
     dispatch(fetchAddress());
