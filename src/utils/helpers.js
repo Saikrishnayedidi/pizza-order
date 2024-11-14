@@ -1,8 +1,12 @@
-export function formatCurrency(value) {
-  return new Intl.NumberFormat("en", {
+
+export function formatCurrency(euroValue) {
+  const conversionRate = 89; 
+  const inrValue = euroValue * conversionRate;
+
+  return new Intl.NumberFormat("en-IN", {
     style: "currency",
-    currency: "EUR",
-  }).format(value);
+    currency: "INR",
+  }).format(inrValue);
 }
 
 export function formatDate(dateStr) {
